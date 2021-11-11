@@ -1,0 +1,225 @@
+<html>
+<head>
+<title>console_9.sql</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #808080;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #cc7832;}
+.s3 { color: #6897bb;}
+.s4 { color: #6a8759;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+console_9.sql</font>
+</center></td></tr></table>
+<pre><span class="s0">--3.1</span>
+<span class="s2">select </span><span class="s1">PLAYERNO</span><span class="s2">,NAME from </span><span class="s1">PLAYERS </span><span class="s2">where </span><span class="s1">YEAR_OF_BIRTH &gt; </span><span class="s3">1960</span><span class="s2">;</span>
+<span class="s0">--3.2</span>
+<span class="s2">select </span><span class="s1">PLAYERNO</span><span class="s2">,NAME,</span><span class="s1">TOWN </span><span class="s2">from </span><span class="s1">PLAYERS </span><span class="s2">where </span><span class="s1">SEX =</span><span class="s4">'F' </span><span class="s2">and </span><span class="s1">TOWN != </span><span class="s4">'Stratford'</span><span class="s2">;</span>
+<span class="s0">--3.3</span>
+<span class="s2">select </span><span class="s1">PLAYERNO </span><span class="s2">from </span><span class="s1">PLAYERS </span><span class="s2">where </span><span class="s1">YEAR_JOINED </span><span class="s2">between </span><span class="s4">'1970' </span><span class="s2">and </span><span class="s4">'1980'</span><span class="s2">;</span>
+<span class="s0">--3.4</span>
+<span class="s2">select </span><span class="s1">PLAYERNO</span><span class="s2">,NAME,</span><span class="s1">YEAR_OF_BIRTH </span><span class="s2">from </span><span class="s1">PLAYERS </span><span class="s2">where  ;</span>
+<span class="s0">--3.5</span>
+<span class="s2">select </span><span class="s1">PAYMENTNO</span><span class="s2">,</span><span class="s1">AMOUNT </span><span class="s2">from </span><span class="s1">PENALTIES </span><span class="s2">where </span><span class="s1">AMOUNT </span><span class="s2">between </span><span class="s4">'50' </span><span class="s2">and </span><span class="s4">'100'</span><span class="s2">;</span>
+<span class="s0">--3.6</span>
+<span class="s2">select </span><span class="s1">PLAYERNO</span><span class="s2">,NAME,</span><span class="s1">TOWN </span><span class="s2">from </span><span class="s1">PLAYERS </span><span class="s2">where </span><span class="s1">TOWN != </span><span class="s4">'Stratford' </span><span class="s2">and </span><span class="s1">TOWN != </span><span class="s4">'Douglas'</span><span class="s2">;</span>
+<span class="s0">--3.7</span>
+<span class="s2">select </span><span class="s1">PLAYERNO</span><span class="s2">,NAME from </span><span class="s1">PLAYERS </span><span class="s2">where NAME like </span><span class="s4">'%is%'</span><span class="s2">;</span>
+<span class="s0">--3.8</span>
+<span class="s2">select NAME from </span><span class="s1">PLAYERS </span><span class="s2">where </span><span class="s1">LEAGUENO </span><span class="s2">is null;</span>
+<span class="s0">--3.9</span>
+<span class="s2">select </span><span class="s1">EMPNO</span><span class="s2">,</span><span class="s1">ENAME </span><span class="s2">from </span><span class="s1">EMP </span><span class="s2">where </span><span class="s1">COMM&gt;SAL</span><span class="s2">;</span>
+<span class="s0">--3.10</span>
+<span class="s2">select </span><span class="s1">EMPNO</span><span class="s2">,</span><span class="s1">ENAME </span><span class="s2">from </span><span class="s1">EMP </span><span class="s2">where </span><span class="s1">DEPTNO = </span><span class="s3">30 </span><span class="s2">and </span><span class="s1">SAL &gt;= </span><span class="s3">1500</span><span class="s2">;</span>
+<span class="s0">--3.11</span>
+<span class="s2">select </span><span class="s1">ENAME </span><span class="s2">from </span><span class="s1">EMP </span><span class="s2">where JOB </span><span class="s1">= </span><span class="s4">'MANAGER' </span><span class="s2">and </span><span class="s1">DEPTNO != </span><span class="s3">30</span><span class="s2">;</span>
+<span class="s0">--3.12</span>
+<span class="s2">select </span><span class="s1">ENAME </span><span class="s2">from </span><span class="s1">EMP </span><span class="s2">where </span><span class="s1">DEPTNO = </span><span class="s3">10 </span><span class="s2">and JOB </span><span class="s1">!= </span><span class="s4">'MANAGER' </span><span class="s2">and JOB </span><span class="s1">!= </span><span class="s4">'CLERK'</span><span class="s2">;</span>
+<span class="s0">--3.13</span>
+<span class="s2">select </span><span class="s1">ENAME </span><span class="s2">from </span><span class="s1">emp </span><span class="s2">where </span><span class="s1">SAL </span><span class="s2">between </span><span class="s4">'1200' </span><span class="s2">and </span><span class="s4">'1500'</span><span class="s2">;</span>
+<span class="s0">--3.14</span>
+<span class="s2">select </span><span class="s1">ENAME </span><span class="s2">from </span><span class="s1">emp </span><span class="s2">where </span><span class="s1">ENAME </span><span class="s2">like </span><span class="s4">'%ALL__%'</span><span class="s2">;</span>
+<span class="s0">--3.15</span>
+<span class="s2">select </span><span class="s1">SAL+COMM</span><span class="s2">,</span><span class="s1">ENAME </span><span class="s2">from </span><span class="s1">EMP</span><span class="s2">;</span>
+<span class="s0">--3.16</span>
+<span class="s2">select </span><span class="s1">ENAME </span><span class="s2">from </span><span class="s1">EMP </span><span class="s2">where </span><span class="s1">COMM&gt; SAL*</span><span class="s3">0.25</span><span class="s2">;</span>
+<span class="s0">--3.17</span>
+<span class="s2">select </span><span class="s1">AVG(SAL) </span><span class="s2">from </span><span class="s1">EMP </span><span class="s2">where JOB </span><span class="s1">=</span><span class="s4">'SALESMAN'</span><span class="s2">;</span>
+<span class="s0">--3.18</span>
+<span class="s2">select </span><span class="s1">ENAME </span><span class="s2">from </span><span class="s1">EMP </span><span class="s2">where </span><span class="s1">COMM </span><span class="s2">is not null ;</span>
+<span class="s0">--3.19</span>
+<span class="s2">select JOB from </span><span class="s1">EMP </span><span class="s2">where </span><span class="s1">DEPTNO = </span><span class="s3">30</span><span class="s2">;</span>
+<span class="s0">--3.20</span>
+<span class="s2">select </span><span class="s1">ENAME </span><span class="s2">from </span><span class="s1">EMP </span><span class="s2">where </span><span class="s1">DEPTNO = </span><span class="s3">30</span><span class="s2">;</span>
+<span class="s0">--3.21</span>
+<span class="s2">select </span><span class="s1">ENAME </span><span class="s2">from </span><span class="s1">emp </span><span class="s2">where </span><span class="s1">HIREDATE </span><span class="s2">between </span><span class="s4">'04/01/81' </span><span class="s2">and </span><span class="s4">'15/04/81'</span><span class="s2">;</span>
+
+<span class="s2">commit ;</span>
+
+<span class="s0">--4.1</span>
+<span class="s2">select </span><span class="s1">TEAMNO </span><span class="s2">from </span><span class="s1">Teams </span><span class="s2">where </span><span class="s1">PLAYERNO = </span><span class="s3">27 </span><span class="s2">and </span><span class="s1">TEAMNO != </span><span class="s3">1</span><span class="s2">;</span>
+<span class="s0">--4.2</span>
+<span class="s2">select </span><span class="s1">Matches.PLAYERNO</span><span class="s2">, NAME, </span><span class="s1">INITIALS </span><span class="s2">from </span><span class="s1">PLAYERS</span><span class="s2">,</span><span class="s1">MATCHES </span><span class="s2">where </span><span class="s1">Matches.PLAYERNO = PLAYERS.PLAYERNO  </span><span class="s2">group by </span><span class="s1">Matches.PLAYERNO</span><span class="s2">, NAME, </span><span class="s1">INITIALS </span><span class="s2">having </span><span class="s1">count(WON) &gt; </span><span class="s3">0 </span><span class="s2">;</span>
+<span class="s0">--4.3</span>
+<span class="s2">select </span><span class="s1">PENALTIES.PLAYERNO</span><span class="s2">, NAME, </span><span class="s1">AMOUNT </span><span class="s2">from </span><span class="s1">PLAYERS</span><span class="s2">, </span><span class="s1">PENALTIES </span><span class="s2">where </span><span class="s1">PENALTIES.PLAYERNO = Players.PLAYERNO </span><span class="s2">group by </span><span class="s1">PENALTIES.PLAYERNO</span><span class="s2">, NAME, </span><span class="s1">AMOUNT </span><span class="s2">having </span><span class="s1">COUNT(AMOUNT) &gt; </span><span class="s3">0</span><span class="s2">;</span>
+<span class="s0">--4.4</span>
+<span class="s2">select </span><span class="s1">PLAYERNO</span><span class="s2">,NAME from </span><span class="s1">PLAYERS</span><span class="s2">,</span><span class="s1">PENALTIES </span><span class="s2">where </span><span class="s1">AMOUNT &gt; </span><span class="s3">50</span><span class="s2">;</span>
+<span class="s0">--4.5</span>
+<span class="s2">select </span><span class="s1">PLAYERNO</span><span class="s2">,NAME,</span><span class="s1">YEAR_OF_BIRTH </span><span class="s2">from </span><span class="s1">PLAYERS </span><span class="s2">where </span><span class="s1">YEAR_OF_BIRTH = (</span><span class="s2">select </span><span class="s1">YEAR_OF_BIRTH </span><span class="s2">from </span><span class="s1">PLAYERS </span><span class="s2">where NAME</span><span class="s1">=</span><span class="s4">'Parmenter' </span><span class="s2">and </span><span class="s1">INITIALS=</span><span class="s4">'R'</span><span class="s1">)</span><span class="s2">;</span>
+<span class="s0">--4.6</span>
+<span class="s2">select min</span><span class="s1">(YEAR_OF_BIRTH) </span><span class="s2">from </span><span class="s1">PLAYERS</span><span class="s2">;</span>
+<span class="s0">--4.7</span>
+<span class="s2">select </span><span class="s1">DEPTNO </span><span class="s2">from </span><span class="s1">DEPT </span><span class="s2">where not exists</span><span class="s1">(</span><span class="s2">select </span><span class="s1">EMPNO </span><span class="s2">from </span><span class="s1">EMP </span><span class="s2">where </span><span class="s1">EMP.DEPTNO = DEPT.DEPTNO )</span><span class="s2">;</span>
+<span class="s0">--4.8</span>
+<span class="s2">select </span><span class="s1">EMPNO</span><span class="s2">,</span><span class="s1">ENAME </span><span class="s2">from </span><span class="s1">EMP </span><span class="s2">where JOB </span><span class="s1">= (</span><span class="s2">select JOB from </span><span class="s1">EMP </span><span class="s2">where </span><span class="s1">ENAME = </span><span class="s4">'JONES'</span><span class="s1">)</span><span class="s2">;</span>
+<span class="s0">--4.9</span>
+<span class="s0">--4.10</span>
+<span class="s2">select </span><span class="s1">ename</span><span class="s2">,</span><span class="s1">SAL </span><span class="s2">from </span><span class="s1">EMP </span><span class="s2">where </span><span class="s1">SAL &gt; (</span><span class="s2">select max</span><span class="s1">(SAL) </span><span class="s2">from </span><span class="s1">EMP </span><span class="s2">where </span><span class="s1">DEPTNO = </span><span class="s3">30</span><span class="s1">)</span><span class="s2">;</span>
+<span class="s0">--4.11 ???</span>
+<span class="s2">select </span><span class="s1">ENAME</span><span class="s2">,JOB from </span><span class="s1">EMP </span><span class="s2">where </span><span class="s1">DEPTNO = </span><span class="s3">10 </span><span class="s2">and JOB </span><span class="s1">!= (</span><span class="s2">select JOB from </span><span class="s1">EMP </span><span class="s2">where </span><span class="s1">DEPTNO = </span><span class="s3">30</span><span class="s1">)</span><span class="s2">;</span>
+<span class="s0">--4.12</span>
+<span class="s2">select </span><span class="s1">EMPNO</span><span class="s2">,</span><span class="s1">ENAME</span><span class="s2">,JOB,</span><span class="s1">SAL </span><span class="s2">from </span><span class="s1">EMP </span><span class="s2">where </span><span class="s1">SAL= (</span><span class="s2">select max</span><span class="s1">(SAL) </span><span class="s2">from </span><span class="s1">EMP)</span><span class="s2">;</span>
+
+<span class="s2">commit;</span>
+
+
+<span class="s0">--5.1</span>
+<span class="s2">select </span><span class="s1">PLAYERNO</span><span class="s2">,</span><span class="s1">count(YEAR_JOINED) </span><span class="s2">as </span><span class="s1">Count </span><span class="s2">from </span><span class="s1">(</span><span class="s2">select </span><span class="s1">YEAR_JOINED</span><span class="s2">,</span><span class="s1">PLAYERNO </span><span class="s2">from </span><span class="s1">PLAYERS </span><span class="s2">group by </span><span class="s1">PLAYERNO) </span><span class="s2">group by </span><span class="s1">YEAR_JOINED</span><span class="s2">;</span>
+<span class="s0">--5.2</span>
+<span class="s2">select </span><span class="s1">avg(AMOUNT) </span><span class="s2">from </span><span class="s1">PENALTIES </span><span class="s2">where </span><span class="s1">AMOUNT &gt;= </span><span class="s3">0</span><span class="s2">;</span>
+<span class="s0">--5.3</span>
+<span class="s2">select </span><span class="s1">AMOUNT </span><span class="s2">from </span><span class="s1">PENALTIES </span><span class="s2">where </span><span class="s1">PEN_DATE &lt; </span><span class="s4">'01/01/83'</span><span class="s2">;</span>
+<span class="s0">--5.4</span>
+<span class="s2">select </span><span class="s1">TOWN </span><span class="s2">from </span><span class="s1">PLAYERS </span><span class="s2">group by </span><span class="s1">TOWN </span><span class="s2">having </span><span class="s1">count(*) &gt;= </span><span class="s3">4</span><span class="s2">;</span>
+<span class="s0">--5.5</span>
+<span class="s2">select </span><span class="s1">PLAYERNO </span><span class="s2">from </span><span class="s1">PENALTIES </span><span class="s2">group by </span><span class="s1">PLAYERNO </span><span class="s2">having </span><span class="s1">count(AMOUNT) &gt;= </span><span class="s3">150</span><span class="s2">;</span>
+<span class="s0">--5.6 ??</span>
+<span class="s2">select NAME,</span><span class="s1">INITIALS </span><span class="s2">from </span><span class="s1">PLAYERS</span><span class="s2">,</span><span class="s1">PENALTIES </span><span class="s2">where </span><span class="s1">PENALTIES.PLAYERNO &gt; ( </span><span class="s2">select </span><span class="s1">PENALTIES.PLAYERNO </span><span class="s2">from </span><span class="s1">PENALTIES </span><span class="s2">group by </span><span class="s1">PENALTIES.PLAYERNO </span><span class="s2">having </span><span class="s1">count(PENALTIES.PLAYERNO))</span><span class="s2">;</span>
+<span class="s0">--5.7</span>
+<span class="s2">select </span><span class="s1">PEN_DATE </span><span class="s2">from </span><span class="s1">PENALTIES </span><span class="s2">group by </span><span class="s1">PEN_DATE </span><span class="s2">having </span><span class="s1">count(PEN_DATE) = </span><span class="s3">2</span><span class="s2">;</span>
+<span class="s0">--5.8 ??</span>
+<span class="s2">select NAME, </span><span class="s1">INITIALS </span><span class="s2">from </span><span class="s1">PLAYERS </span><span class="s2">join </span><span class="s1">(</span><span class="s2">select </span><span class="s1">AMOUNT </span><span class="s2">from </span><span class="s1">PENALTIES </span><span class="s2">group by </span><span class="s1">AMOUNT </span><span class="s2">having </span><span class="s1">count(AMOUNT) &gt; </span><span class="s3">40 </span><span class="s1">)</span><span class="s2">;</span>
+<span class="s0">--5.9</span>
+<span class="s2">select NAME,</span><span class="s1">INITIALS </span><span class="s2">from </span><span class="s1">PLAYERS p</span><span class="s2">,</span><span class="s1">PENALTIES </span><span class="s2">where </span><span class="s1">p.playerno = penalties.PLAYERNO </span><span class="s2">group by NAME, </span><span class="s1">INITIALS </span><span class="s2">having </span><span class="s1">sum(amount) &gt;= </span><span class="s2">all</span><span class="s1">(</span><span class="s2">select </span><span class="s1">sum(amount) </span><span class="s2">from </span><span class="s1">PENALTIES </span><span class="s2">group by </span><span class="s1">PENALTIES.PLAYERNO)</span><span class="s2">;</span>
+<span class="s0">--5.10 ??</span>
+<span class="s2">select </span><span class="s1">PEN_DATE </span><span class="s2">from </span><span class="s1">PENALTIES </span><span class="s2">where </span><span class="s1">PEN_DATE  (</span><span class="s2">select </span><span class="s1">count(PEN_DATE) </span><span class="s2">from </span><span class="s1">PENALTIES </span><span class="s2">where </span><span class="s1">PEN_DATE </span><span class="s2">is not null</span><span class="s1">)</span><span class="s2">;</span>
+<span class="s0">--5.11</span>
+<span class="s2">select </span><span class="s1">PLAYERNO</span><span class="s2">, </span><span class="s1">TEAMNO</span><span class="s2">,</span><span class="s1">WON </span><span class="s2">,</span><span class="s1">LOST </span><span class="s2">from </span><span class="s1">MATCHES </span><span class="s2">order by </span><span class="s1">WON </span><span class="s2">asc;</span>
+<span class="s0">--5.12</span>
+<span class="s2">select </span><span class="s1">ENAME</span><span class="s2">,</span><span class="s1">SAL </span><span class="s2">from </span><span class="s1">EMP </span><span class="s2">where </span><span class="s1">DEPTNO = </span><span class="s3">30 </span><span class="s2">order by </span><span class="s1">SAL </span><span class="s2">DESC;</span>
+<span class="s0">--5.13</span>
+<span class="s2">select </span><span class="s1">ENAME</span><span class="s2">,</span><span class="s1">sal</span><span class="s2">,JOB from </span><span class="s1">EMP </span><span class="s2">order by JOB,</span><span class="s1">SAL </span><span class="s2">desc;</span>
+<span class="s0">--5.14</span>
+<span class="s2">select </span><span class="s1">ENAME</span><span class="s2">,</span><span class="s1">HIREDATE </span><span class="s2">from </span><span class="s1">EMP </span><span class="s2">order by </span><span class="s1">HIREDATE </span><span class="s2">desc,</span><span class="s1">ENAME </span><span class="s2">desc;</span>
+<span class="s0">--5.15</span>
+<span class="s2">select </span><span class="s1">ENAME</span><span class="s2">,JOB,</span><span class="s1">sal</span><span class="s2">,</span><span class="s1">COMM </span><span class="s2">from </span><span class="s1">EMP </span><span class="s2">where JOB </span><span class="s1">= </span><span class="s4">'SALESMAN' </span><span class="s2">order by </span><span class="s1">SAL-Comm </span><span class="s2">desc ;</span>
+<span class="s0">--5.16 ?</span>
+<span class="s2">select </span><span class="s1">avg(SAL)</span><span class="s2">,job,</span><span class="s1">count(*)</span><span class="s2">,</span><span class="s1">DEPTNO </span><span class="s2">from </span><span class="s1">EMP </span><span class="s2">group by </span><span class="s1">DEPTNO</span><span class="s2">,JOB;</span>
+<span class="s0">--5.17</span>
+<span class="s2">select job,</span><span class="s1">count(*)</span><span class="s2">,</span><span class="s1">avg(SAL) </span><span class="s2">from </span><span class="s1">EMP </span><span class="s2">group by job having </span><span class="s1">count(*) &gt; </span><span class="s3">2</span><span class="s2">;</span>
+<span class="s0">--5.18</span>
+<span class="s2">select </span><span class="s1">DEPTNO</span><span class="s2">,</span><span class="s1">count(*) </span><span class="s2">from </span><span class="s1">EMP </span><span class="s2">group by </span><span class="s1">DEPTNO </span><span class="s2">having </span><span class="s1">count(*) &gt; </span><span class="s3">2</span><span class="s2">;</span>
+<span class="s0">--5.19</span>
+<span class="s2">select </span><span class="s1">avg(SAL+COMM) </span><span class="s2">from </span><span class="s1">EMP </span><span class="s2">where </span><span class="s1">DEPTNO = </span><span class="s3">30</span><span class="s2">;</span>
+
+<span class="s2">commit;</span>
+
+<span class="s0">--6.1</span>
+<span class="s2">select NAME,</span><span class="s1">INITIALS</span><span class="s2">,</span><span class="s1">WON </span><span class="s2">from </span><span class="s1">PLAYERS</span><span class="s2">,</span><span class="s1">MATCHES </span><span class="s2">where </span><span class="s1">PLAYERS.PLAYERNO = MATCHES.PLAYERNO</span><span class="s2">;</span>
+<span class="s0">--6.2</span>
+<span class="s2">select NAME,</span><span class="s1">PEN_DATE</span><span class="s2">, </span><span class="s1">AMOUNT </span><span class="s2">from </span><span class="s1">PLAYERS</span><span class="s2">,</span><span class="s1">PENALTIES </span><span class="s2">where </span><span class="s1">PLAYERS.PLAYERNO=PENALTIES.PLAYERNO </span><span class="s2">order by </span><span class="s1">AMOUNT </span><span class="s2">DESC;</span>
+<span class="s0">--6.3</span>
+<span class="s2">select </span><span class="s1">TEAMNO</span><span class="s2">,NAME from </span><span class="s1">PLAYERS</span><span class="s2">,</span><span class="s1">TEAMS </span><span class="s2">where </span><span class="s1">TEAMS.PLAYERNO = PLAYERS.PLAYERNO</span><span class="s2">;</span>
+<span class="s0">--6.4</span>
+<span class="s2">select NAME,</span><span class="s1">WON</span><span class="s2">,</span><span class="s1">LOST </span><span class="s2">from </span><span class="s1">MATCHES</span><span class="s2">,</span><span class="s1">PLAYERS </span><span class="s2">where </span><span class="s1">matches.PLAYERNO = players.PLAYERNO</span><span class="s2">;</span>
+<span class="s0">--6.5 ??</span>
+<span class="s2">select </span><span class="s1">PLAYERNO</span><span class="s2">,NAME,</span><span class="s1">AMOUNT </span><span class="s2">from </span><span class="s1">PLAYERS</span><span class="s2">,</span><span class="s1">PENALTIES </span><span class="s2">where </span><span class="s1">PLAYERS.PLAYERNO = PENALTIES.PLAYERNO </span><span class="s2">order by </span><span class="s1">AMOUNT </span><span class="s2">asc ;</span>
+<span class="s0">--6.6</span>
+<span class="s2">select </span><span class="s1">ENAME</span><span class="s2">,</span><span class="s1">LOC </span><span class="s2">from </span><span class="s1">emp </span><span class="s2">, </span><span class="s1">dept </span><span class="s2">where </span><span class="s1">ENAME =</span><span class="s4">'ALLEN' </span><span class="s2">and </span><span class="s1">emp.DEPTNO = dept.DEPTNO</span><span class="s2">;</span>
+<span class="s0">--6.7</span>
+<span class="s2">select </span><span class="s1">ENAME</span><span class="s2">,</span><span class="s1">SAL</span><span class="s2">,</span><span class="s1">COMM</span><span class="s2">,JOB from </span><span class="s1">EMP </span><span class="s2">where </span><span class="s1">SAL+COMM &gt; (</span><span class="s2">select distinct </span><span class="s1">avg(nvl(SAL+COMM)</span><span class="s2">,</span><span class="s3">0</span><span class="s1">)</span><span class="s2">from </span><span class="s1">EMP </span><span class="s2">where JOB </span><span class="s1">= </span><span class="s4">'MANAGER'</span><span class="s1">)</span><span class="s2">;</span>
+<span class="s0">--6.8</span>
+<span class="s2">select </span><span class="s1">extract(</span><span class="s2">year from </span><span class="s1">HIREDATE)</span><span class="s2">year,</span><span class="s1">count(*) </span><span class="s2">from </span><span class="s1">EMP </span><span class="s2">group by </span><span class="s1">extract(</span><span class="s2">year from </span><span class="s1">HIREDATE)</span><span class="s2">having </span><span class="s1">count(*)&gt;</span><span class="s3">0</span><span class="s2">;</span>
+<span class="s0">--6.9</span>
+<span class="s2">select </span><span class="s1">ENAME</span><span class="s2">,</span><span class="s1">DEPTNO</span><span class="s2">,job from </span><span class="s1">EMP </span><span class="s2">where JOB </span><span class="s1">= (</span><span class="s2">select JOB from </span><span class="s1">DEPT </span><span class="s2">where </span><span class="s1">DEPT.DEPTNO = EMP.DEPTNO </span><span class="s2">and </span><span class="s1">EMP.DEPTNO = </span><span class="s3">30</span><span class="s1">)</span><span class="s2">;</span>
+
+<span class="s2">commit;</span>
+
+<span class="s0">--7.1 ?????????</span>
+<span class="s2">select NAME from </span><span class="s1">PLAYERS</span><span class="s2">,</span><span class="s1">MATCHES</span><span class="s2">,</span><span class="s1">TEAMS </span><span class="s2">where </span><span class="s1">Teams.TEAMNO </span><span class="s2">in</span><span class="s1">(</span><span class="s2">select </span><span class="s1">TEAMS.TEAMNO </span><span class="s2">from </span><span class="s1">MATCHES </span><span class="s2">where </span><span class="s1">TEAMS.TEAMNO = </span><span class="s3">2</span><span class="s1">) </span><span class="s2">and </span><span class="s1">teams.TEAMNO </span><span class="s2">in</span><span class="s1">(</span><span class="s2">select </span><span class="s1">TEAMS.TEAMNO </span><span class="s2">from </span><span class="s1">MATCHES </span><span class="s2">where </span><span class="s1">TEAMS.TEAMNO=</span><span class="s3">1</span><span class="s1">)</span><span class="s2">;</span>
+<span class="s0">--7.2</span>
+<span class="s2">select NAME,</span><span class="s1">INITIALS </span><span class="s2">from </span><span class="s1">PLAYERS </span><span class="s2">where </span><span class="s1">players.PLAYERNO </span><span class="s2">not in</span><span class="s1">(</span><span class="s2">select </span><span class="s1">PENALTIES.playerno </span><span class="s2">from </span><span class="s1">PENALTIES </span><span class="s2">where </span><span class="s1">extract(</span><span class="s2">year from </span><span class="s1">PEN_DATE) = </span><span class="s4">'1980'</span><span class="s1">)</span><span class="s2">;</span>
+<span class="s0">--7.3</span>
+<span class="s2">select NAME,</span><span class="s1">AMOUNT </span><span class="s2">from </span><span class="s1">PLAYERS</span><span class="s2">,</span><span class="s1">PENALTIES </span><span class="s2">where </span><span class="s1">amount &gt; </span><span class="s3">80 </span><span class="s2">and </span><span class="s1">PENALTIES.PLAYERNO=PLAYERS.PLAYERNO </span><span class="s2">group by NAME, </span><span class="s1">AMOUNT </span><span class="s2">having </span><span class="s1">count(penalties.playerno)&gt;=</span><span class="s3">1</span><span class="s2">;</span>
+<span class="s0">--7.4</span>
+<span class="s2">select name,</span><span class="s1">AMOUNT </span><span class="s2">from </span><span class="s1">PLAYERS</span><span class="s2">,</span><span class="s1">PENALTIES </span><span class="s2">where </span><span class="s1">AMOUNT &gt; </span><span class="s3">80 </span><span class="s2">and </span><span class="s1">PENALTIES.PLAYERNO=PLAYERS.PLAYERNO </span><span class="s2">group by name, </span><span class="s1">AMOUNT</span><span class="s2">;</span>
+<span class="s0">--7.5</span>
+<span class="s2">select </span><span class="s1">ENAME</span><span class="s2">, </span><span class="s1">SAL</span><span class="s2">,</span><span class="s1">EMP.DEPTNO </span><span class="s2">from </span><span class="s1">EMP</span><span class="s2">,</span><span class="s1">DEPT </span><span class="s2">where </span><span class="s1">SAL &gt; (</span><span class="s2">select </span><span class="s1">avg(SAL) </span><span class="s2">from </span><span class="s1">EMP </span><span class="s2">where </span><span class="s1">DEPT.DEPTNO=EMP.DEPTNO) </span><span class="s2">order by </span><span class="s1">DEPTNO</span><span class="s2">;</span>
+<span class="s0">--7.6</span>
+<span class="s2">select </span><span class="s1">* </span><span class="s2">from </span><span class="s1">DEPT </span><span class="s2">where exists</span><span class="s1">(</span><span class="s2">select </span><span class="s1">* </span><span class="s2">from </span><span class="s1">EMP </span><span class="s2">where </span><span class="s1">emp.DEPTNO = dept.DEPTNO)</span><span class="s2">;</span>
+<span class="s0">--7.7</span>
+<span class="s2">select </span><span class="s1">* </span><span class="s2">from </span><span class="s1">DEPT </span><span class="s2">where exists</span><span class="s1">(</span><span class="s2">select </span><span class="s1">* </span><span class="s2">from </span><span class="s1">emp </span><span class="s2">where </span><span class="s1">emp.DEPTNO = dept.DEPTNO </span><span class="s2">and </span><span class="s1">SAL &gt;= </span><span class="s3">1000</span><span class="s1">)</span><span class="s2">;</span>
+<span class="s0">--7.8</span>
+<span class="s2">select </span><span class="s1">* </span><span class="s2">from </span><span class="s1">DEPT </span><span class="s2">where not exists</span><span class="s1">(</span><span class="s2">select </span><span class="s1">* </span><span class="s2">from </span><span class="s1">EMP </span><span class="s2">where  </span><span class="s1">emp.DEPTNO = dept.DEPTNO </span><span class="s2">and </span><span class="s1">EMP.SAL &lt;= </span><span class="s3">1000</span><span class="s1">)</span><span class="s2">;</span>
+
+<span class="s2">commit ;</span>
+
+<span class="s0">--8.2</span>
+<span class="s2">select </span><span class="s1">* </span><span class="s2">from </span><span class="s1">PARTS </span><span class="s2">where </span><span class="s1">super </span><span class="s2">in </span><span class="s1">(</span><span class="s2">select </span><span class="s1">super </span><span class="s2">from </span><span class="s1">parts </span><span class="s2">where </span><span class="s1">super = </span><span class="s4">'P3'</span><span class="s1">) </span><span class="s2">or </span><span class="s1">super </span><span class="s2">in </span><span class="s1">(</span><span class="s2">select </span><span class="s1">super </span><span class="s2">from </span><span class="s1">parts </span><span class="s2">where </span><span class="s1">super = </span><span class="s4">'P9'</span><span class="s1">)</span><span class="s2">;</span>
+<span class="s0">--8.3</span>
+<span class="s2">select </span><span class="s1">* </span><span class="s2">from </span><span class="s1">PARTS </span><span class="s2">connect by prior </span><span class="s1">sub = super </span><span class="s2">start with </span><span class="s1">sub = </span><span class="s4">'P1'</span><span class="s2">;</span>
+<span class="s0">--8.4</span>
+<span class="s2">select </span><span class="s1">* </span><span class="s2">from </span><span class="s1">parts </span><span class="s2">where </span><span class="s1">price &gt; </span><span class="s3">20 </span><span class="s2">and </span><span class="s1">super = </span><span class="s4">'P1' </span><span class="s2">connect by prior </span><span class="s1">sub = super </span><span class="s2">start with </span><span class="s1">sub = </span><span class="s4">'P1'</span><span class="s2">;</span>
+<span class="s0">--8.5</span>
+<span class="s2">select </span><span class="s1">* </span><span class="s2">from </span><span class="s1">emp </span><span class="s2">where JOB </span><span class="s1">!= </span><span class="s4">'MANAGER' </span><span class="s2">connect by prior </span><span class="s1">EMPNO = MGR </span><span class="s2">start with </span><span class="s1">ENAME = </span><span class="s4">'JONES'</span><span class="s2">;</span>
+<span class="s0">--8.6</span>
+<span class="s2">select </span><span class="s1">* </span><span class="s2">from </span><span class="s1">emp </span><span class="s2">connect by prior </span><span class="s1">MGR = EMPNO </span><span class="s2">start with </span><span class="s1">ENAME = </span><span class="s4">'SMITH'</span><span class="s2">;</span>
+<span class="s0">--8.7</span>
+<span class="s2">select JOB, </span><span class="s1">ENAME</span><span class="s2">, </span><span class="s1">avg(SAL) </span><span class="s2">from </span><span class="s1">EMP </span><span class="s2">where </span><span class="s1">MGR </span><span class="s2">in </span><span class="s1">(</span><span class="s2">select </span><span class="s1">EMPNO </span><span class="s2">from </span><span class="s1">EMP) </span><span class="s2">or </span><span class="s1">EMPNO </span><span class="s2">in </span><span class="s1">(</span><span class="s2">select </span><span class="s1">MGR </span><span class="s2">from </span><span class="s1">EMP) </span><span class="s2">group by rollup </span><span class="s1">(</span><span class="s2">JOB, </span><span class="s1">ENAME)</span><span class="s2">;</span>
+
+<span class="s2">commit ;</span>
+
+
+<span class="s0">--1.Select</span>
+<span class="s2">select </span><span class="s1">EMPLOYEE_ID</span><span class="s2">,</span><span class="s1">LAST_NAME</span><span class="s2">,</span><span class="s1">JOB_ID</span><span class="s2">,</span><span class="s1">HIRE_DATE </span><span class="s2">as </span><span class="s1">STARTDATE </span><span class="s2">from </span><span class="s1">EMPLOYEES </span><span class="s2">order by </span><span class="s1">EMPLOYEE_ID</span><span class="s2">;</span>
+<span class="s0">--2</span>
+<span class="s2">select distinct </span><span class="s1">JOB_ID </span><span class="s2">from </span><span class="s1">EMPLOYEES</span><span class="s2">;</span>
+<span class="s0">--3</span>
+<span class="s2">select </span><span class="s1">LAST_NAME</span><span class="s2">,</span><span class="s1">SALARY </span><span class="s2">from </span><span class="s1">EMPLOYEES </span><span class="s2">where </span><span class="s1">SALARY &gt; </span><span class="s3">12000</span><span class="s2">;</span>
+<span class="s0">--4</span>
+<span class="s2">select </span><span class="s1">LAST_NAME</span><span class="s2">,</span><span class="s1">DEPARTMENT_ID </span><span class="s2">from </span><span class="s1">EMPLOYEES </span><span class="s2">where </span><span class="s1">EMPLOYEE_ID = </span><span class="s3">176</span><span class="s2">;</span>
+<span class="s0">--5</span>
+<span class="s2">select </span><span class="s1">LAST_NAME</span><span class="s2">,</span><span class="s1">JOB_ID</span><span class="s2">,</span><span class="s1">HIRE_DATE </span><span class="s2">from </span><span class="s1">EMPLOYEES </span><span class="s2">order by </span><span class="s1">HIRE_DATE </span><span class="s2">asc ;</span>
+<span class="s0">--6</span>
+<span class="s2">select </span><span class="s1">LAST_NAME</span><span class="s2">,</span><span class="s1">DEPARTMENT_ID </span><span class="s2">from </span><span class="s1">EMPLOYEES </span><span class="s2">where </span><span class="s1">DEPARTMENT_ID = </span><span class="s3">20 </span><span class="s2">order by </span><span class="s1">LAST_NAME </span><span class="s2">asc ;</span>
+<span class="s0">--7</span>
+<span class="s2">select </span><span class="s1">LAST_NAME employee</span><span class="s2">,</span><span class="s1">SALARY MonthlySalary</span><span class="s2">,</span><span class="s1">COMMISSION_PCT Commission </span><span class="s2">from </span><span class="s1">EMPLOYEES </span><span class="s2">where </span><span class="s1">COMMISSION_PCT = </span><span class="s3">0.20</span><span class="s2">;</span>
+
+<span class="s0">--1.Joins</span>
+<span class="s2">select </span><span class="s1">JOB_TITLE</span><span class="s2">,</span><span class="s1">sum(SALARY) </span><span class="s2">from </span><span class="s1">EMPLOYEES </span><span class="s2">natural join </span><span class="s1">JOBS </span><span class="s2">group by </span><span class="s1">JOB_TITLE </span><span class="s2">order by </span><span class="s1">sum(SALARY) </span><span class="s2">desc;</span>
+<span class="s0">--2</span>
+<span class="s2">select </span><span class="s1">EMPLOYEE_ID</span><span class="s2">,</span><span class="s1">FIRST_NAME</span><span class="s2">,</span><span class="s1">avg(SALARY) </span><span class="s2">from </span><span class="s1">EMPLOYEES </span><span class="s2">natural join </span><span class="s1">JOBS </span><span class="s2">group by </span><span class="s1">EMPLOYEE_ID</span><span class="s2">, </span><span class="s1">FIRST_NAME </span><span class="s2">order by </span><span class="s1">avg(SALARY)</span><span class="s2">desc ;</span>
+<span class="s0">--3</span>
+<span class="s2">select </span><span class="s1">FIRST_NAME</span><span class="s2">,</span><span class="s1">LAST_NAME</span><span class="s2">,</span><span class="s1">JOB_TITLE </span><span class="s2">from </span><span class="s1">EMPLOYEES </span><span class="s2">inner join </span><span class="s1">JOBS J </span><span class="s2">on </span><span class="s1">EMPLOYEES.JOB_ID = J.JOB_ID</span><span class="s2">;</span>
+<span class="s0">--4</span>
+<span class="s2">select </span><span class="s1">DEPARTMENT_NAME</span><span class="s2">, </span><span class="s1">POSTAL_CODE</span><span class="s2">, </span><span class="s1">CITY</span><span class="s2">, </span><span class="s1">STATE_PROVINCE</span><span class="s2">, </span><span class="s1">STREET_ADDRESS </span><span class="s2">from </span><span class="s1">DEPARTMENTS</span><span class="s2">, </span><span class="s1">LOCATIONS </span><span class="s2">where </span><span class="s1">LOCATIONS.LOCATION_ID = DEPARTMENTS.LOCATION_ID</span><span class="s2">;</span>
+<span class="s0">--5</span>
+<span class="s2">select </span><span class="s1">DEPARTMENT_NAME</span><span class="s2">, </span><span class="s1">POSTAL_CODE</span><span class="s2">, </span><span class="s1">CITY</span><span class="s2">, </span><span class="s1">STATE_PROVINCE</span><span class="s2">, </span><span class="s1">STREET_ADDRESS</span><span class="s2">, </span><span class="s1">COUNTRY_ID </span><span class="s2">from </span><span class="s1">DEPARTMENTS</span><span class="s2">, </span><span class="s1">LOCATIONS </span><span class="s2">where </span><span class="s1">LOCATIONS.LOCATION_ID = DEPARTMENTS.LOCATION_ID</span><span class="s2">;</span>
+<span class="s0">--6</span>
+<span class="s2">select </span><span class="s1">FIRST_NAME + LAST_NAME Manager </span><span class="s2">from </span><span class="s1">EMPLOYEES</span><span class="s2">,</span><span class="s1">JOBS </span><span class="s2">where </span><span class="s1">JOBS.JOB_TITLE </span><span class="s2">like </span><span class="s4">'Manager'</span><span class="s2">;</span>
+<span class="s0">--7</span>
+<span class="s2">select </span><span class="s1">FIRST_NAME || LAST_NAME </span><span class="s2">as Name, </span><span class="s1">JOB_TITLE </span><span class="s2">as job,  </span><span class="s1">DEPARTMENT_NAME</span><span class="s2">, </span><span class="s1">SALARY </span><span class="s2">from </span><span class="s1">EMPLOYEES</span><span class="s2">, </span><span class="s1">JOBS</span><span class="s2">, </span><span class="s1">DEPARTMENTS </span><span class="s2">where </span><span class="s1">DEPARTMENTS.DEPARTMENT_ID = EMPLOYEES.DEPARTMENT_ID </span><span class="s2">and </span><span class="s1">JOBS.JOB_ID = EMPLOYEES.JOB_ID</span><span class="s2">;</span>
+<span class="s0">--8</span>
+<span class="s2">select LEVEL, </span><span class="s1">lpad(</span><span class="s4">''</span><span class="s2">, </span><span class="s3">1 </span><span class="s1">* </span><span class="s2">LEVEL</span><span class="s1">) || LAST_NAME </span><span class="s2">Hierarchy, </span><span class="s1">City </span><span class="s2">from </span><span class="s1">EMPLOYEES</span><span class="s2">, </span><span class="s1">LOCATIONS</span><span class="s2">, </span><span class="s1">DEPARTMENTS </span><span class="s2">where </span><span class="s1">LOCATIONS.LOCATION_ID = DEPARTMENTS.LOCATION_ID </span><span class="s2">and </span><span class="s1">EMPLOYEES.DEPARTMENT_ID = DEPARTMENTS.DEPARTMENT_ID </span><span class="s2">connect by prior </span><span class="s1">EMPLOYEE_ID = EMPLOYEES.MANAGER_ID </span><span class="s2">start with </span><span class="s1">LAST_NAME = </span><span class="s4">'King' </span><span class="s2">order by LEVEL;</span>
+
+
+
+
+</pre>
+</body>
+</html>
